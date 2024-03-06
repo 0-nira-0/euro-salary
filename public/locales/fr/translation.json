@@ -1,0 +1,109 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Calculateur de salaire européen",
+    "tagline": "Brut ↔ Net pour 6 pays européens, règles fiscales 2024"
+  },
+  "nav": {
+    "calculator": "Calculateur",
+    "compare": "Comparer",
+    "about": "À propos"
+  },
+  "country": {
+    "FR": "France",
+    "DE": "Allemagne",
+    "ES": "Espagne",
+    "IT": "Italie",
+    "BE": "Belgique",
+    "PL": "Pologne",
+    "data_year": "Données {{year}}"
+  },
+  "input": {
+    "gross": "Brut",
+    "net": "Net",
+    "annual": "Annuel",
+    "monthly": "Mensuel",
+    "salary_label": "Salaire",
+    "direction_label": "Direction du calcul",
+    "period_label": "Période"
+  },
+  "options": {
+    "title": "Options",
+    "family_status": "Situation familiale",
+    "children": "Enfants",
+    "employment_type": "Type d'emploi",
+    "region": "Région",
+    "single": "Célibataire",
+    "married": "Marié(e)",
+    "married_1income": "Marié(e) (1 revenu)",
+    "single_parent": "Parent isolé",
+    "employee": "Salarié",
+    "executive": "Cadre",
+    "part_time": "Temps partiel"
+  },
+  "result": {
+    "net_monthly": "Net / mois",
+    "net_annual": "Net / an",
+    "employer_cost": "Coût employeur",
+    "effective_rate": "Taux effectif",
+    "breakdown": "Détail",
+    "employee_contributions": "Cotisations salariales",
+    "employer_contributions": "Cotisations patronales",
+    "income_tax": "Impôt sur le revenu"
+  },
+  "share": {
+    "button": "Partager",
+    "copied": "Lien copié !"
+  },
+  "contribution": {
+    "pension_t1": "Assurance vieillesse (T1)",
+    "pension_t2": "Assurance vieillesse (T2)",
+    "complementary_t1": "AGIRC-ARRCO (T1)",
+    "complementary_t2": "AGIRC-ARRCO (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG déductible",
+    "csg_non_deductible": "CSG non déductible",
+    "crds": "CRDS",
+    "income_tax": "Impôt sur le revenu",
+    "er_health": "Assurance maladie (patronale)",
+    "er_pension_t1": "Vieillesse patronale (T1)",
+    "er_pension_t2": "Vieillesse patronale (T2)",
+    "er_complementary_t1": "AGIRC-ARRCO patronal (T1)",
+    "er_complementary_t2": "AGIRC-ARRCO patronal (T2)",
+    "er_unemployment": "Assurance chômage (patronale)",
+    "er_family": "Allocations familiales",
+    "er_accident": "AT/MP",
+    "er_ceg_t1": "CEG patronal (T1)",
+    "er_ceg_t2": "CEG patronal (T2)",
+    "pension": "Assurance retraite",
+    "health": "Assurance maladie",
+    "care": "Assurance dépendance",
+    "unemployment": "Assurance chômage",
+    "solidarity": "Supplément de solidarité",
+    "er_pension": "Retraite (patronal)",
+    "er_health_kv": "Maladie KV (patronal)",
+    "er_care": "Dépendance PV (patronal)",
+    "social_security": "Sécurité sociale",
+    "training": "Formation professionnelle",
+    "er_social_security": "Sécurité sociale (patronal)",
+    "er_training": "Formation (patronal)",
+    "er_fogasa": "FOGASA",
+    "social_security_extra": "SS (cotisation additionnelle)",
+    "regional_tax": "Taxe régionale",
+    "municipal_tax": "Taxe municipale",
+    "special_ss": "Cotisation spéciale SS",
+    "disability": "Assurance invalidité",
+    "sickness": "Assurance maladie",
+    "er_disability": "Invalidité (patronal)",
+    "er_labor_fund": "Fonds du travail"
+  },
+  "legal": {
+    "disclaimer_FR": "Simulation indicative basée sur le barème 2024. Ne constitue pas un avis fiscal.",
+    "disclaimer_DE": "Estimation basée sur le tableau des salaires 2024. Pas de conseil fiscal.",
+    "disclaimer_ES": "Simulation indicative basée sur le barème IRPF national 2024. Sans valeur de conseil fiscal.",
+    "disclaimer_IT": "Simulation indicative basée sur le barème IRPEF 2024. Ne constitue pas un conseil fiscal.",
+    "disclaimer_BE": "Simulation indicative basée sur le barème IPP 2024. Ne constitue pas un conseil fiscal.",
+    "disclaimer_PL": "Estimation indicative basée sur la réglementation fiscale 2024. Ne constitue pas un conseil fiscal."
+  }
+}

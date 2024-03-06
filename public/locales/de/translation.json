@@ -1,0 +1,109 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Europäischer Gehaltsrechner",
+    "tagline": "Brutto ↔ Netto für 6 europäische Länder, Steuerregeln 2024"
+  },
+  "nav": {
+    "calculator": "Rechner",
+    "compare": "Vergleich",
+    "about": "Über uns"
+  },
+  "country": {
+    "FR": "Frankreich",
+    "DE": "Deutschland",
+    "ES": "Spanien",
+    "IT": "Italien",
+    "BE": "Belgien",
+    "PL": "Polen",
+    "data_year": "Daten {{year}}"
+  },
+  "input": {
+    "gross": "Brutto",
+    "net": "Netto",
+    "annual": "Jährlich",
+    "monthly": "Monatlich",
+    "salary_label": "Gehalt",
+    "direction_label": "Berechnungsrichtung",
+    "period_label": "Zeitraum"
+  },
+  "options": {
+    "title": "Optionen",
+    "family_status": "Familienstand",
+    "children": "Kinder",
+    "employment_type": "Beschäftigungsart",
+    "region": "Region",
+    "single": "Ledig",
+    "married": "Verheiratet",
+    "married_1income": "Verheiratet (1 Einkommen)",
+    "single_parent": "Alleinerziehend",
+    "employee": "Arbeitnehmer",
+    "executive": "Führungskraft",
+    "part_time": "Teilzeit"
+  },
+  "result": {
+    "net_monthly": "Netto / Monat",
+    "net_annual": "Netto / Jahr",
+    "employer_cost": "Arbeitgeberkosten",
+    "effective_rate": "Effektivsteuersatz",
+    "breakdown": "Aufschlüsselung",
+    "employee_contributions": "Arbeitnehmerbeiträge",
+    "employer_contributions": "Arbeitgeberbeiträge",
+    "income_tax": "Lohnsteuer"
+  },
+  "share": {
+    "button": "Teilen",
+    "copied": "Link kopiert!"
+  },
+  "contribution": {
+    "pension_t1": "Rentenversicherung (T1)",
+    "pension_t2": "Rentenversicherung (T2)",
+    "complementary_t1": "Zusatzrente (T1)",
+    "complementary_t2": "Zusatzrente (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG (abzugsfähig)",
+    "csg_non_deductible": "CSG (nicht abzugsfähig)",
+    "crds": "CRDS",
+    "income_tax": "Einkommensteuer",
+    "er_health": "Krankenversicherung (AG)",
+    "er_pension_t1": "Rentenversicherung T1 (AG)",
+    "er_pension_t2": "Rentenversicherung T2 (AG)",
+    "er_complementary_t1": "Zusatzrente T1 (AG)",
+    "er_complementary_t2": "Zusatzrente T2 (AG)",
+    "er_unemployment": "Arbeitslosenversicherung (AG)",
+    "er_family": "Familienleistungen (AG)",
+    "er_accident": "Berufsunfälle",
+    "er_ceg_t1": "CEG T1 (AG)",
+    "er_ceg_t2": "CEG T2 (AG)",
+    "pension": "Rentenversicherung",
+    "health": "Krankenversicherung",
+    "care": "Pflegeversicherung",
+    "unemployment": "Arbeitslosenversicherung",
+    "solidarity": "Solidaritätszuschlag",
+    "er_pension": "Rente (AG)",
+    "er_health_kv": "KV (AG)",
+    "er_care": "PV (AG)",
+    "social_security": "Sozialversicherung",
+    "training": "Berufsausbildung",
+    "er_social_security": "Sozialversicherung (AG)",
+    "er_training": "Ausbildung (AG)",
+    "er_fogasa": "FOGASA",
+    "social_security_extra": "SV (Zusatzbeitrag)",
+    "regional_tax": "Regionalsteuer",
+    "municipal_tax": "Gemeindesteuer",
+    "special_ss": "Sonderbeitrag SV",
+    "disability": "Berufsunfähigkeitsversicherung",
+    "sickness": "Krankenversicherung",
+    "er_disability": "Berufsunfähigkeit (AG)",
+    "er_labor_fund": "Arbeitsfonds"
+  },
+  "legal": {
+    "disclaimer_FR": "Schätzung auf Basis des französischen Steuertarifs 2024. Keine Steuerberatung.",
+    "disclaimer_DE": "Schätzung auf Basis des Lohnsteuertarifs 2024. Keine Rechtsberatung.",
+    "disclaimer_ES": "Schätzung auf Basis des spanischen IRPF-Tarifs 2024. Keine Steuerberatung.",
+    "disclaimer_IT": "Schätzung auf Basis des IRPEF-Tarifs 2024. Keine Steuerberatung.",
+    "disclaimer_BE": "Schätzung auf Basis des belgischen IPP-Tarifs 2024. Keine Steuerberatung.",
+    "disclaimer_PL": "Schätzung auf Basis der polnischen Steuervorschriften 2024. Keine Steuerberatung."
+  }
+}
