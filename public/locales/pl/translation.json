@@ -1,0 +1,109 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Europejski kalkulator wynagrodzeń",
+    "tagline": "Brutto ↔ Netto dla 6 krajów europejskich, przepisy podatkowe 2024"
+  },
+  "nav": {
+    "calculator": "Kalkulator",
+    "compare": "Porównaj",
+    "about": "O aplikacji"
+  },
+  "country": {
+    "FR": "Francja",
+    "DE": "Niemcy",
+    "ES": "Hiszpania",
+    "IT": "Włochy",
+    "BE": "Belgia",
+    "PL": "Polska",
+    "data_year": "Dane {{year}}"
+  },
+  "input": {
+    "gross": "Brutto",
+    "net": "Netto",
+    "annual": "Rocznie",
+    "monthly": "Miesięcznie",
+    "salary_label": "Wynagrodzenie",
+    "direction_label": "Kierunek obliczeń",
+    "period_label": "Okres"
+  },
+  "options": {
+    "title": "Opcje",
+    "family_status": "Stan cywilny",
+    "children": "Dzieci",
+    "employment_type": "Rodzaj zatrudnienia",
+    "region": "Region",
+    "single": "Kawaler/Panna",
+    "married": "Zamężna/Żonaty",
+    "married_1income": "Małżeństwo (1 dochód)",
+    "single_parent": "Samotny rodzic",
+    "employee": "Pracownik",
+    "executive": "Kadra kierownicza",
+    "part_time": "Niepełny etat"
+  },
+  "result": {
+    "net_monthly": "Netto / miesiąc",
+    "net_annual": "Netto / rok",
+    "employer_cost": "Koszt pracodawcy",
+    "effective_rate": "Efektywna stawka",
+    "breakdown": "Szczegóły",
+    "employee_contributions": "Składki pracownika",
+    "employer_contributions": "Składki pracodawcy",
+    "income_tax": "Podatek dochodowy"
+  },
+  "share": {
+    "button": "Udostępnij",
+    "copied": "Link skopiowany!"
+  },
+  "contribution": {
+    "pension": "Składka emerytalna",
+    "disability": "Składka rentowa",
+    "sickness": "Składka chorobowa",
+    "health": "Składka zdrowotna",
+    "income_tax": "Podatek PIT",
+    "er_pension": "Emerytalna (pracodawca)",
+    "er_disability": "Rentowa (pracodawca)",
+    "er_accident": "Wypadkowa",
+    "er_labor_fund": "Fundusz Pracy",
+    "pension_t1": "Emerytura (T1)",
+    "pension_t2": "Emerytura (T2)",
+    "complementary_t1": "Uzupełniająca (T1)",
+    "complementary_t2": "Uzupełniająca (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG odliczalna",
+    "csg_non_deductible": "CSG nieodliczalna",
+    "crds": "CRDS",
+    "er_health": "Zdrowie (pracodawca)",
+    "er_pension_t1": "Emerytura T1 (pracodawca)",
+    "er_pension_t2": "Emerytura T2 (pracodawca)",
+    "er_complementary_t1": "Uzupełniająca T1 (pracodawca)",
+    "er_complementary_t2": "Uzupełniająca T2 (pracodawca)",
+    "er_unemployment": "Bezrobocie (pracodawca)",
+    "er_family": "Zasiłki rodzinne",
+    "er_ceg_t1": "CEG T1 (pracodawca)",
+    "er_ceg_t2": "CEG T2 (pracodawca)",
+    "care": "Ubezpieczenie opiekuńcze",
+    "unemployment": "Bezrobocie",
+    "solidarity": "Dopłata solidarnościowa",
+    "er_health_kv": "KV (pracodawca)",
+    "er_care": "PV (pracodawca)",
+    "social_security": "Ubezpieczenie społeczne",
+    "social_security_extra": "US (dodatkowe)",
+    "training": "Szkolenia zawodowe",
+    "er_social_security": "Ubezpieczenie społeczne (pracodawca)",
+    "er_training": "Szkolenia (pracodawca)",
+    "er_fogasa": "FOGASA",
+    "regional_tax": "Podatek regionalny",
+    "municipal_tax": "Podatek gminny",
+    "special_ss": "Specjalna składka SS"
+  },
+  "legal": {
+    "disclaimer_FR": "Szacowanie orientacyjne na podstawie skali podatkowej Francji 2024. Nie stanowi porady podatkowej.",
+    "disclaimer_DE": "Szacowanie na podstawie tabeli podatku od wynagrodzeń 2024. Nie stanowi porady prawnej.",
+    "disclaimer_ES": "Szacowanie orientacyjne na podstawie skali IRPF 2024. Nie stanowi porady podatkowej.",
+    "disclaimer_IT": "Szacowanie orientacyjne na podstawie skali IRPEF 2024. Nie stanowi porady podatkowej.",
+    "disclaimer_BE": "Szacowanie orientacyjne na podstawie skali IPP 2024. Nie stanowi porady podatkowej.",
+    "disclaimer_PL": "Szacowanie orientacyjne na podstawie przepisów podatkowych 2024. Nie stanowi porady podatkowej."
+  }
+}

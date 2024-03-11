@@ -1,0 +1,109 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Calculadora de salarios europea",
+    "tagline": "Bruto ↔ Neto para 6 países europeos, normas fiscales 2024"
+  },
+  "nav": {
+    "calculator": "Calculadora",
+    "compare": "Comparar",
+    "about": "Acerca de"
+  },
+  "country": {
+    "FR": "Francia",
+    "DE": "Alemania",
+    "ES": "España",
+    "IT": "Italia",
+    "BE": "Bélgica",
+    "PL": "Polonia",
+    "data_year": "Datos {{year}}"
+  },
+  "input": {
+    "gross": "Bruto",
+    "net": "Neto",
+    "annual": "Anual",
+    "monthly": "Mensual",
+    "salary_label": "Salario",
+    "direction_label": "Dirección del cálculo",
+    "period_label": "Período"
+  },
+  "options": {
+    "title": "Opciones",
+    "family_status": "Estado civil",
+    "children": "Hijos",
+    "employment_type": "Tipo de empleo",
+    "region": "Región",
+    "single": "Soltero/a",
+    "married": "Casado/a",
+    "married_1income": "Casado/a (1 ingreso)",
+    "single_parent": "Padre/madre soltero/a",
+    "employee": "Empleado",
+    "executive": "Directivo",
+    "part_time": "Tiempo parcial"
+  },
+  "result": {
+    "net_monthly": "Neto / mes",
+    "net_annual": "Neto / año",
+    "employer_cost": "Coste empresa",
+    "effective_rate": "Tipo efectivo",
+    "breakdown": "Desglose",
+    "employee_contributions": "Cotizaciones trabajador",
+    "employer_contributions": "Cotizaciones empresa",
+    "income_tax": "IRPF"
+  },
+  "share": {
+    "button": "Compartir",
+    "copied": "¡Enlace copiado!"
+  },
+  "contribution": {
+    "social_security": "Seguridad Social",
+    "unemployment": "Desempleo",
+    "training": "Formación profesional",
+    "income_tax": "IRPF",
+    "er_social_security": "SS (empresa)",
+    "er_unemployment": "Desempleo (empresa)",
+    "er_training": "Formación (empresa)",
+    "er_fogasa": "FOGASA",
+    "pension_t1": "Vejez (T1)",
+    "pension_t2": "Vejez (T2)",
+    "complementary_t1": "Complementaria (T1)",
+    "complementary_t2": "Complementaria (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG deducible",
+    "csg_non_deductible": "CSG no deducible",
+    "crds": "CRDS",
+    "er_health": "Salud (empresa)",
+    "er_pension_t1": "Pensión T1 (empresa)",
+    "er_pension_t2": "Pensión T2 (empresa)",
+    "er_complementary_t1": "Complementaria T1 (empresa)",
+    "er_complementary_t2": "Complementaria T2 (empresa)",
+    "er_family": "Prestaciones familiares",
+    "er_accident": "Accidentes laborales",
+    "er_ceg_t1": "CEG T1 (empresa)",
+    "er_ceg_t2": "CEG T2 (empresa)",
+    "pension": "Pensión",
+    "health": "Salud",
+    "care": "Dependencia",
+    "solidarity": "Recargo solidaridad",
+    "er_pension": "Pensión (empresa)",
+    "er_health_kv": "KV (empresa)",
+    "er_care": "PV (empresa)",
+    "social_security_extra": "SS (adicional)",
+    "regional_tax": "Impuesto regional",
+    "municipal_tax": "Impuesto municipal",
+    "special_ss": "Cotización especial SS",
+    "disability": "Invalidez",
+    "sickness": "Enfermedad",
+    "er_disability": "Invalidez (empresa)",
+    "er_labor_fund": "Fondo de trabajo"
+  },
+  "legal": {
+    "disclaimer_FR": "Simulación orientativa basada en la escala fiscal francesa 2024. Sin valor de asesoramiento fiscal.",
+    "disclaimer_DE": "Estimación basada en la tabla del impuesto sobre el salario 2024. Sin asesoramiento fiscal.",
+    "disclaimer_ES": "Simulación orientativa basada en el baremo IRPF estatal 2024. Sin valor de asesoramiento fiscal.",
+    "disclaimer_IT": "Simulación orientativa basada en la escala IRPEF 2024. Sin valor de asesoramiento fiscal.",
+    "disclaimer_BE": "Simulación orientativa basada en la escala IPP 2024. Sin valor de asesoramiento fiscal.",
+    "disclaimer_PL": "Estimación orientativa basada en la normativa fiscal polaca 2024. Sin valor de asesoramiento fiscal."
+  }
+}
