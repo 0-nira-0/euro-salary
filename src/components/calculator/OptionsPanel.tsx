@@ -77,22 +77,6 @@ export function OptionsPanel() {
             </div>
           </div>
 
-          <div>
-            <label className="block text-xs font-body font-medium text-neutral mb-1.5">
-              {t('options.employment_type')}
-            </label>
-            <select
-              value={input.employmentType}
-              onChange={(e) =>
-                setInput({ employmentType: e.target.value as typeof input.employmentType })
-              }
-              className="w-full px-3 py-2 text-sm border border-slate-200 rounded font-body text-primary focus:outline-none focus:border-tertiary"
-            >
-              <option value="employee">{t('options.employee')}</option>
-              <option value="executive">{t('options.executive')}</option>
-              <option value="part_time">{t('options.part_time')}</option>
-            </select>
-          </div>
         </div>
       )}
     </div>

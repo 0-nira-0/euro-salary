@@ -50,7 +50,7 @@ function Section({ title, lines, total, accentColor }: SectionProps) {
               <tr key={i} className="border-t border-slate-100 hover:bg-slate-50 transition-colors">
                 <td className="px-4 py-2.5 text-primary">
                   <div className="flex items-center gap-1.5">
-                    <span>{line.label}</span>
+                    <span>{t(line.labelKey)}</span>
                     {line.legalReference && (
                       <Tooltip content={line.legalReference}>
                         <span className="inline-flex items-center justify-center w-3.5 h-3.5 rounded-full bg-tertiary/10 text-tertiary text-[10px] font-bold cursor-help">
