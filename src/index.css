@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: #002366;
+    --color-secondary: #059669;
+    --color-tertiary: #2563EB;
+  }
+}
+
+@layer base {
   * {
     box-sizing: border-box;
   }
