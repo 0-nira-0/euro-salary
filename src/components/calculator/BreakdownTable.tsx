@@ -87,12 +87,11 @@ export function BreakdownTable({ result }: BreakdownTableProps) {
 
   return (
     <div className="space-y-3">
-      <div className="flex items-center gap-2 px-1 mb-1">
-        <span className="text-xs font-body text-neutral flex-1 text-right pr-2 hidden sm:block">
-          {t('input.gross')} base
-        </span>
-        <span className="text-xs font-body text-neutral w-16 text-right hidden sm:block">Rate</span>
-        <span className="text-xs font-body text-neutral w-20 text-right">Amount</span>
+      <div className="flex items-center gap-2 px-4 py-2 bg-slate-100 rounded border border-slate-200 mb-1">
+        <span className="text-xs font-body text-neutral font-medium flex-1">Label</span>
+        <span className="text-xs font-body text-neutral font-medium w-24 text-right hidden sm:block">Base</span>
+        <span className="text-xs font-body text-neutral font-medium w-16 text-right hidden sm:block">Rate</span>
+        <span className="text-xs font-body text-neutral font-medium w-20 text-right">Amount</span>
       </div>
 
       <Section
