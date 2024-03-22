@@ -49,9 +49,10 @@ function fmt(n: number, currency = true) {
 interface ResultCardProps {
   result: TaxResult
   highlight?: boolean
+  compact?: boolean
 }
 
-export function ResultCard({ result, highlight = false }: ResultCardProps) {
+export function ResultCard({ result, highlight = false, compact = false }: ResultCardProps) {
   const { t } = useTranslation()
 
   const pieSlices: PieSlice[] = [
@@ -59,6 +60,44 @@ export function ResultCard({ result, highlight = false }: ResultCardProps) {
     { value: result.totalEmployeeDeductions, color: '#2563EB', label: t('result.employee_contributions') },
     { value: result.totalIncomeTax, color: '#DC2626', label: t('result.income_tax') },
   ]
+
+  if (compact) {
+    return (
+      <div className={`bg-white rounded border ${highlight ? 'border-secondary shadow-md' : 'border-slate-200 shadow-sm'} p-3`}>
+        <div className="flex justify-center mb-3">
+          <PieChart slices={pieSlices} />
+        </div>
+        <div className="text-center mb-3">
+          <p className="text-xs font-body text-neutral mb-0.5">{t('result.net_monthly')}</p>
+          <p className="font-headline text-2xl font-bold text-secondary">
+            €{fmt(result.netMonthly)}
+          </p>
+        </div>
+        <div className="space-y-1.5 text-xs font-body">
+          <div className="flex justify-between">
+            <span className="text-neutral">{t('result.net_annual')}</span>
+            <span className="font-semibold text-primary">€{fmt(result.netAnnual)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-neutral">{t('result.employer_cost')}</span>
+            <span className="font-semibold text-primary">€{fmt(result.employerCostMonthly)}<span className="text-neutral font-normal">/mo</span></span>
+          </div>
+          <div className="flex justify-between pt-1 border-t border-slate-100">
+            <span className="text-neutral">{t('result.effective_rate')}</span>
+            <span className="font-bold text-primary">{(result.effectiveTaxRate * 100).toFixed(1)}%</span>
+          </div>
+        </div>
+        <div className="mt-2.5 space-y-1 text-xs font-body">
+          {pieSlices.map((sl) => (
+            <div key={sl.label} className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-sm shrink-0" style={{ background: sl.color }} />
+              <span className="text-neutral truncate">{sl.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className={`bg-white rounded border ${highlight ? 'border-secondary shadow-md' : 'border-slate-200 shadow-sm'} p-5`}>

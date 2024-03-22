@@ -38,7 +38,7 @@ export function CompareMode() {
             {COUNTRIES.find((c) => c.code === input.country)?.flag}{' '}
             {t(`country.${input.country}`)}
           </p>
-          <ResultCard result={result} />
+          <ResultCard result={result} compact />
         </div>
         <div>
           <div className="flex items-center gap-2 mb-2">
@@ -58,7 +58,7 @@ export function CompareMode() {
             </select>
           </div>
           {compareResult ? (
-            <ResultCard result={compareResult} highlight />
+            <ResultCard result={compareResult} compact highlight />
           ) : (
             <div className="bg-white rounded border border-slate-200 p-5 text-center text-neutral text-sm font-body">
               Select a country to compare

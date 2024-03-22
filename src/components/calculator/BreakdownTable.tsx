@@ -16,9 +16,10 @@ interface SectionProps {
   lines: ContributionLine[]
   total: number
   accentColor: string
+  t: (key: string) => string
 }
 
-function Section({ title, lines, total, accentColor }: SectionProps) {
+function Section({ title, lines, total, accentColor, t }: SectionProps) {
   const [open, setOpen] = useState(true)
 
   return (
@@ -99,6 +100,7 @@ export function BreakdownTable({ result }: BreakdownTableProps) {
         lines={result.employeeContributions}
         total={result.totalEmployeeDeductions}
         accentColor="#2563EB"
+        t={t}
       />
 
       <Section
@@ -106,6 +108,7 @@ export function BreakdownTable({ result }: BreakdownTableProps) {
         lines={result.incomeTaxLines}
         total={result.totalIncomeTax}
         accentColor="#DC2626"
+        t={t}
       />
 
       <Section
@@ -113,6 +116,7 @@ export function BreakdownTable({ result }: BreakdownTableProps) {
         lines={result.employerContributions}
         total={result.totalEmployerContributions}
         accentColor="#64748B"
+        t={t}
       />
 
       <div className="flex items-center justify-between px-4 py-3 bg-primary text-white rounded font-headline text-sm font-bold">
