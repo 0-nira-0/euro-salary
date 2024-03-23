@@ -1,0 +1,109 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Calcolatore di stipendi europeo",
+    "tagline": "Lordo ↔ Netto per 6 paesi europei, regole fiscali 2024"
+  },
+  "nav": {
+    "calculator": "Calcolatore",
+    "compare": "Confronta",
+    "about": "Informazioni"
+  },
+  "country": {
+    "FR": "Francia",
+    "DE": "Germania",
+    "ES": "Spagna",
+    "IT": "Italia",
+    "BE": "Belgio",
+    "PL": "Polonia",
+    "data_year": "Dati {{year}}"
+  },
+  "input": {
+    "gross": "Lordo",
+    "net": "Netto",
+    "annual": "Annuale",
+    "monthly": "Mensile",
+    "salary_label": "Stipendio",
+    "direction_label": "Direzione calcolo",
+    "period_label": "Periodo"
+  },
+  "options": {
+    "title": "Opzioni",
+    "family_status": "Stato civile",
+    "children": "Figli",
+    "employment_type": "Tipo di impiego",
+    "region": "Regione",
+    "single": "Celibe/Nubile",
+    "married": "Sposato/a",
+    "married_1income": "Sposato/a (1 reddito)",
+    "single_parent": "Genitore single",
+    "employee": "Dipendente",
+    "executive": "Dirigente",
+    "part_time": "Part-time"
+  },
+  "result": {
+    "net_monthly": "Netto / mese",
+    "net_annual": "Netto / anno",
+    "employer_cost": "Costo datore",
+    "effective_rate": "Aliquota effettiva",
+    "breakdown": "Dettaglio",
+    "employee_contributions": "Contributi dipendente",
+    "employer_contributions": "Contributi datore",
+    "income_tax": "IRPEF"
+  },
+  "share": {
+    "button": "Condividi",
+    "copied": "Link copiato!"
+  },
+  "contribution": {
+    "social_security": "Contributi INPS",
+    "social_security_extra": "INPS aggiuntivi",
+    "income_tax": "IRPEF",
+    "regional_tax": "Addizionale regionale",
+    "municipal_tax": "Addizionale comunale",
+    "er_social_security": "INPS datore",
+    "er_accident": "INAIL",
+    "pension_t1": "Pensione (T1)",
+    "pension_t2": "Pensione (T2)",
+    "complementary_t1": "Complementare (T1)",
+    "complementary_t2": "Complementare (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG deducibile",
+    "csg_non_deductible": "CSG non deducibile",
+    "crds": "CRDS",
+    "er_health": "Salute (datore)",
+    "er_pension_t1": "Pensione T1 (datore)",
+    "er_pension_t2": "Pensione T2 (datore)",
+    "er_complementary_t1": "Complementare T1 (datore)",
+    "er_complementary_t2": "Complementare T2 (datore)",
+    "er_unemployment": "Disoccupazione (datore)",
+    "er_family": "Assegni familiari",
+    "er_ceg_t1": "CEG T1 (datore)",
+    "er_ceg_t2": "CEG T2 (datore)",
+    "pension": "Pensione",
+    "health": "Salute",
+    "care": "Assistenza",
+    "unemployment": "Disoccupazione",
+    "solidarity": "Supplemento solidarietà",
+    "er_pension": "Pensione (datore)",
+    "er_health_kv": "KV (datore)",
+    "er_care": "PV (datore)",
+    "training": "Formazione professionale",
+    "er_training": "Formazione (datore)",
+    "er_fogasa": "FOGASA",
+    "special_ss": "Contributo speciale SS",
+    "disability": "Invalidità",
+    "sickness": "Malattia",
+    "er_disability": "Invalidità (datore)",
+    "er_labor_fund": "Fondo lavoro"
+  },
+  "legal": {
+    "disclaimer_FR": "Simulazione indicativa basata sulla scala fiscale francese 2024. Non costituisce consulenza fiscale.",
+    "disclaimer_DE": "Stima basata sulla tabella delle imposte 2024. Non costituisce consulenza legale.",
+    "disclaimer_ES": "Simulazione indicativa basata sulla scala IRPF statale 2024. Non costituisce consulenza fiscale.",
+    "disclaimer_IT": "Simulazione indicativa basata sulla scala IRPEF 2024. Non costituisce consulenza fiscale.",
+    "disclaimer_BE": "Simulazione indicativa basata sulla scala IPP 2024. Non costituisce consulenza fiscale.",
+    "disclaimer_PL": "Stima indicativa basata sulla normativa fiscale polacca 2024. Non costituisce consulenza fiscale."
+  }
+}

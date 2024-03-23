@@ -1,0 +1,109 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "European Salary Calculator",
+    "tagline": "Gross ↔ Net for 6 European countries, 2024 tax rules"
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "compare": "Compare",
+    "about": "About"
+  },
+  "country": {
+    "FR": "France",
+    "DE": "Germany",
+    "ES": "Spain",
+    "IT": "Italy",
+    "BE": "Belgium",
+    "PL": "Poland",
+    "data_year": "Data {{year}}"
+  },
+  "input": {
+    "gross": "Gross",
+    "net": "Net",
+    "annual": "Annual",
+    "monthly": "Monthly",
+    "salary_label": "Salary",
+    "direction_label": "Calculation direction",
+    "period_label": "Period"
+  },
+  "options": {
+    "title": "Options",
+    "family_status": "Family status",
+    "children": "Children",
+    "employment_type": "Employment type",
+    "region": "Region",
+    "single": "Single",
+    "married": "Married",
+    "married_1income": "Married (1 income)",
+    "single_parent": "Single parent",
+    "employee": "Employee",
+    "executive": "Executive",
+    "part_time": "Part-time"
+  },
+  "result": {
+    "net_monthly": "Net / month",
+    "net_annual": "Net / year",
+    "employer_cost": "Employer cost",
+    "effective_rate": "Effective tax rate",
+    "breakdown": "Breakdown",
+    "employee_contributions": "Employee contributions",
+    "employer_contributions": "Employer contributions",
+    "income_tax": "Income tax"
+  },
+  "share": {
+    "button": "Share",
+    "copied": "Link copied!"
+  },
+  "contribution": {
+    "pension_t1": "Old-age insurance (T1)",
+    "pension_t2": "Old-age insurance (T2)",
+    "complementary_t1": "Supplementary pension (T1)",
+    "complementary_t2": "Supplementary pension (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG (deductible)",
+    "csg_non_deductible": "CSG (non-deductible)",
+    "crds": "CRDS",
+    "income_tax": "Income tax",
+    "er_health": "Health (employer)",
+    "er_pension_t1": "Pension T1 (employer)",
+    "er_pension_t2": "Pension T2 (employer)",
+    "er_complementary_t1": "Supplementary T1 (employer)",
+    "er_complementary_t2": "Supplementary T2 (employer)",
+    "er_unemployment": "Unemployment (employer)",
+    "er_family": "Family allowances (employer)",
+    "er_accident": "Workplace accidents",
+    "er_ceg_t1": "CEG T1 (employer)",
+    "er_ceg_t2": "CEG T2 (employer)",
+    "pension": "Pension insurance",
+    "health": "Health insurance",
+    "care": "Care insurance",
+    "unemployment": "Unemployment insurance",
+    "solidarity": "Solidarity surcharge",
+    "er_pension": "Pension (employer)",
+    "er_health_kv": "Health KV (employer)",
+    "er_care": "Care PV (employer)",
+    "social_security": "Social security",
+    "training": "Vocational training",
+    "er_social_security": "Social security (employer)",
+    "er_training": "Training (employer)",
+    "er_fogasa": "FOGASA",
+    "social_security_extra": "Social security (additional)",
+    "regional_tax": "Regional tax",
+    "municipal_tax": "Municipal tax",
+    "special_ss": "Special SS contribution",
+    "disability": "Disability insurance",
+    "sickness": "Sickness insurance",
+    "er_disability": "Disability (employer)",
+    "er_labor_fund": "Labor Fund"
+  },
+  "legal": {
+    "disclaimer_FR": "Indicative simulation based on the 2024 French tax scale. Does not constitute tax advice.",
+    "disclaimer_DE": "Estimate based on the 2024 wage tax table. Not legal tax advice.",
+    "disclaimer_ES": "Indicative simulation based on the 2024 IRPF state scale. No tax advisory value.",
+    "disclaimer_IT": "Indicative simulation based on the 2024 IRPEF scale. Does not constitute tax advice.",
+    "disclaimer_BE": "Indicative simulation based on the 2024 IPP scale. Does not constitute tax advice.",
+    "disclaimer_PL": "Indicative estimate based on 2024 tax regulations. Does not constitute tax advice."
+  }
+}
