@@ -93,9 +93,10 @@ export function SalaryInput() {
           inputMode="numeric"
           value={rawValue}
           onChange={(e) => setRawValue(e.target.value)}
-          className="w-full pl-10 pr-4 py-4 text-3xl font-headline font-bold text-primary border border-slate-200 rounded focus:outline-none focus:border-tertiary transition-colors"
+          className="w-full pl-10 pr-4 py-4 text-3xl font-headline font-bold text-primary border border-slate-200 rounded focus:outline-none focus:ring-2 focus:ring-tertiary focus:border-tertiary transition-colors"
           placeholder="60 000"
           aria-label={t('input.salary_label')}
+          autoComplete="off"
         />
       </div>
 
