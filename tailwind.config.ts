@@ -19,6 +19,12 @@ export default {
       },
       borderRadius: {
         DEFAULT: '4px',
+        sm: '2px',
+        md: '6px',
+        lg: '8px',
+      },
+      boxShadow: {
+        card: '0 1px 3px 0 rgba(0, 35, 102, 0.08), 0 1px 2px -1px rgba(0, 35, 102, 0.06)',
       },
     },
   },
