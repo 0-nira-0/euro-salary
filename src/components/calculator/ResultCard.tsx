@@ -41,8 +41,9 @@ function PieChart({ slices }: { slices: PieSlice[] }) {
   )
 }
 
-function fmt(n: number) {
-  return n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+function fmt(n: number, currency = true) {
+  const s = Math.abs(n).toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+  return currency ? s : s
 }
 
 interface ResultCardProps {
