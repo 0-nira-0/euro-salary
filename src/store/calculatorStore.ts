@@ -16,7 +16,7 @@ interface CalculatorState {
 
 const DEFAULT_INPUT: CalculatorInput = {
   country: 'FR',
-  grossAnnual: 60_000,
+  grossAnnual: 55_000,
   direction: 'gross_to_net',
   employmentType: 'employee',
   familyStatus: 'single',
