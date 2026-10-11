@@ -1,39 +1,61 @@
-import { useState, useRef, useEffect } from 'react'
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 
 interface TooltipProps {
   content: string
-  children: React.ReactNode
+  children: ReactNode
+  align?: 'center' | 'start'
 }
 
-export function Tooltip({ content, children }: TooltipProps) {
+export function Tooltip({ content, children, align = 'center' }: TooltipProps) {
   const [visible, setVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLSpanElement>(null)
+  const id = useId()
 
   useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setVisible(false)
-      }
+    if (!visible) return
+    const onPointerDown = (e: Event) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setVisible(false)
     }
-    document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
-  }, [])
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setVisible(false)
+    }
+    document.addEventListener('pointerdown', onPointerDown)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [visible])
+
+  const position = align === 'start' ? 'left-0' : 'left-1/2 -translate-x-1/2'
+  const arrow = align === 'start' ? 'left-2' : 'left-1/2 -translate-x-1/2'
 
   return (
-    <div ref={ref} className="relative inline-block">
-      <div
+    <span ref={ref} className="relative inline-block">
+      <span
+        role="button"
+        tabIndex={0}
+        aria-describedby={visible ? id : undefined}
+        aria-expanded={visible}
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
+        onFocus={() => setVisible(true)}
+        onBlur={() => setVisible(false)}
         onClick={() => setVisible((v) => !v)}
+        className="rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary"
       >
         {children}
-      </div>
+      </span>
       {visible && (
-        <div className="absolute z-20 bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 bg-slate-800 text-white text-xs rounded p-2.5 font-body shadow-lg">
+        <span
+          id={id}
+          role="tooltip"
+          className={`absolute z-20 bottom-full mb-2 w-64 max-w-[calc(100vw-2rem)] animate-pop-in bg-slate-800 text-white text-xs rounded p-2.5 font-body shadow-lg ${position}`}
+        >
           {content}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800" />
-        </div>
+          <span className={`absolute top-full border-4 border-transparent border-t-slate-800 ${arrow}`} />
+        </span>
       )}
-    </div>
+    </span>
   )
 }

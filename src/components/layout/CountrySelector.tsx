@@ -1,38 +1,35 @@
 import { useTranslation } from 'react-i18next'
 import { useCalculatorStore } from '../../store/calculatorStore'
-import type { Country } from '../../tax-engine/types'
-
-const COUNTRIES: { code: Country; flag: string }[] = [
-  { code: 'FR', flag: '🇫🇷' },
-  { code: 'DE', flag: '🇩🇪' },
-  { code: 'ES', flag: '🇪🇸' },
-  { code: 'IT', flag: '🇮🇹' },
-  { code: 'BE', flag: '🇧🇪' },
-  { code: 'PL', flag: '🇵🇱' },
-]
+import { COUNTRIES } from '../../tax-engine/types'
+import { COUNTRY_FLAGS } from '../../lib/countries'
 
 export function CountrySelector() {
   const { t } = useTranslation()
-  const { input, setInput } = useCalculatorStore()
+  const country = useCalculatorStore((s) => s.input.country)
+  const setInput = useCalculatorStore((s) => s.setInput)
 
   return (
-    <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Select country">
-      {COUNTRIES.map(({ code, flag }) => (
-        <button
-          key={code}
-          onClick={() => setInput({ country: code })}
-          role="radio"
-          aria-checked={input.country === code}
-          className={`flex items-center gap-2 px-4 py-2.5 rounded border font-body text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-1 ${
-            input.country === code
-              ? 'bg-primary text-white border-primary shadow-md scale-105'
-              : 'bg-white text-neutral border-slate-200 hover:border-primary hover:text-primary'
-          }`}
-        >
-          <span className="text-xl leading-none">{flag}</span>
-          <span>{t(`country.${code}`)}</span>
-        </button>
-      ))}
+    <div className="flex flex-wrap gap-2" role="radiogroup" aria-label={t('a11y.select_country')}>
+      {COUNTRIES.map((code) => {
+        const active = country === code
+        return (
+          <button
+            key={code}
+            type="button"
+            onClick={() => setInput({ country: code })}
+            role="radio"
+            aria-checked={active}
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2.5 rounded border font-body text-sm font-medium transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-tertiary focus-visible:ring-offset-1 ${
+              active
+                ? 'bg-primary text-white border-primary shadow-md sm:scale-105'
+                : 'bg-white text-neutral border-slate-200 hover:border-primary hover:text-primary'
+            }`}
+          >
+            <span className="text-xl leading-none" aria-hidden="true">{COUNTRY_FLAGS[code]}</span>
+            <span>{t(`country.${code}`)}</span>
+          </button>
+        )
+      })}
     </div>
   )
 }

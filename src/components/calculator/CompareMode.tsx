@@ -1,58 +1,100 @@
 import { useTranslation } from 'react-i18next'
 import { useCalculatorStore } from '../../store/calculatorStore'
 import { ResultCard } from './ResultCard'
-import type { Country } from '../../tax-engine/types'
+import { COUNTRIES, type Country } from '../../tax-engine/types'
+import { COUNTRY_FLAGS } from '../../lib/countries'
+import { useFormat } from '../../hooks/useFormat'
+import type { TaxResult } from '../../tax-engine/types'
 
-const COUNTRIES: { code: Country; flag: string; name: string }[] = [
-  { code: 'FR', flag: '🇫🇷', name: 'France' },
-  { code: 'DE', flag: '🇩🇪', name: 'Germany' },
-  { code: 'ES', flag: '🇪🇸', name: 'Spain' },
-  { code: 'IT', flag: '🇮🇹', name: 'Italy' },
-  { code: 'BE', flag: '🇧🇪', name: 'Belgium' },
-  { code: 'PL', flag: '🇵🇱', name: 'Poland' },
-]
+const COLOR_A = '#002366'
+const COLOR_B = '#0D9488'
 
-function fmt(n: number) {
-  return n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+interface MetricRowProps {
+  label: string
+  a: number
+  b: number
+  max: number
+  nameA: string
+  nameB: string
+}
+
+function Bar({ value, max, color, name }: { value: number; max: number; color: string; name: string }) {
+  const fmt = useFormat()
+  const width = max > 0 ? Math.max(0, (value / max) * 100) : 0
+  return (
+    <div className="flex items-center gap-2">
+      <span className="w-7 shrink-0 text-[10px] font-medium text-neutral" aria-hidden="true">{name}</span>
+      <div className="relative h-4 flex-1 rounded-sm bg-slate-100">
+        <div
+          className="h-full rounded-sm transition-[width] duration-700 ease-out"
+          style={{ width: `${width}%`, background: color }}
+        />
+      </div>
+      <span className="w-20 shrink-0 text-right text-xs font-medium text-primary tabular-nums">
+        {fmt.money(value)}
+      </span>
+    </div>
+  )
+}
+
+function MetricRow({ label, a, b, max, nameA, nameB }: MetricRowProps) {
+  return (
+    <div className="space-y-1">
+      <p className="text-xs font-medium text-neutral">{label}</p>
+      <Bar value={a} max={max} color={COLOR_A} name={nameA} />
+      <Bar value={b} max={max} color={COLOR_B} name={nameB} />
+    </div>
+  )
+}
+
+function metrics(r: TaxResult, t: (k: string) => string) {
+  return [
+    { label: t('input.net'), value: r.netAnnual },
+    { label: t('result.employee_contributions'), value: r.totalEmployeeDeductions },
+    { label: t('result.income_tax'), value: r.totalIncomeTax },
+  ]
 }
 
 export function CompareMode() {
   const { t } = useTranslation()
-  const { result, compareResult, compareInput, setCompareCountry, input } = useCalculatorStore()
+  const fmt = useFormat()
+  const result = useCalculatorStore((s) => s.result)
+  const compareResult = useCalculatorStore((s) => s.compareResult)
+  const compareCountry = useCalculatorStore((s) => s.compareCountry)
+  const setCompareCountry = useCalculatorStore((s) => s.setCompareCountry)
+  const country = useCalculatorStore((s) => s.input.country)
 
   if (!result) return null
 
-  // Bar chart SVG — comparing two results
-  const maxNet = Math.max(result.netAnnual, compareResult?.netAnnual ?? 0)
-  const BAR_MAX_W = 180
-
-  function barWidth(value: number) {
-    return maxNet > 0 ? (value / maxNet) * BAR_MAX_W : 0
-  }
+  const rowsA = metrics(result, t)
+  const rowsB = compareResult ? metrics(compareResult, t) : []
+  const max = Math.max(...rowsA.map((r) => r.value), ...rowsB.map((r) => r.value))
+  const diff = compareResult ? compareResult.netMonthly - result.netMonthly : 0
 
   return (
     <div className="space-y-6">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <p className="text-xs font-body text-neutral mb-2 font-medium">
-            {COUNTRIES.find((c) => c.code === input.country)?.flag}{' '}
-            {t(`country.${input.country}`)}
+          <p className="text-xs font-body text-neutral mb-2 font-medium h-7 flex items-center">
+            <span aria-hidden="true" className="mr-1.5">{COUNTRY_FLAGS[country]}</span>
+            {t(`country.${country}`)}
           </p>
           <ResultCard result={result} compact />
         </div>
         <div>
-          <div className="flex items-center gap-2 mb-2">
-            <p className="text-xs font-body text-neutral font-medium">
+          <div className="flex items-center gap-2 mb-2 h-7">
+            <label htmlFor="compare-country" className="text-xs font-body text-neutral font-medium">
               {t('nav.compare')}:
-            </p>
+            </label>
             <select
-              value={compareInput?.country ?? 'DE'}
+              id="compare-country"
+              value={compareCountry}
               onChange={(e) => setCompareCountry(e.target.value as Country)}
-              className="text-xs border border-slate-200 rounded px-2 py-1 font-body text-primary focus:outline-none focus:border-tertiary"
+              className="text-xs border border-slate-200 rounded px-2 py-1 bg-white font-body text-primary focus:outline-none focus:border-tertiary"
             >
-              {COUNTRIES.filter((c) => c.code !== input.country).map((c) => (
-                <option key={c.code} value={c.code}>
-                  {c.flag} {c.name}
+              {COUNTRIES.filter((c) => c !== country).map((c) => (
+                <option key={c} value={c}>
+                  {COUNTRY_FLAGS[c]} {t(`country.${c}`)}
                 </option>
               ))}
             </select>
@@ -61,50 +103,48 @@ export function CompareMode() {
             <ResultCard result={compareResult} compact highlight />
           ) : (
             <div className="bg-white rounded border border-slate-200 p-5 text-center text-neutral text-sm font-body">
-              Select a country to compare
+              {t('result.empty')}
             </div>
           )}
         </div>
       </div>
 
-      {/* Bar chart */}
       {compareResult && (
-        <div className="bg-white rounded border border-slate-200 p-5">
-          <h3 className="font-headline text-sm font-semibold text-primary mb-4">
-            Annual comparison
+        <div className="bg-white rounded border border-slate-200 p-4 sm:p-5 font-body">
+          <h3 className="font-headline text-sm font-semibold text-primary mb-1">
+            {t('compare.annual')}
           </h3>
+          <p className="text-xs text-neutral mb-4" aria-live="polite">
+            {Math.abs(diff) < 1
+              ? t('compare.diff_equal')
+              : t('compare.diff_more', {
+                  country: t(`country.${diff > 0 ? compareCountry : country}`),
+                  amount: fmt.money(Math.abs(diff)),
+                })}
+          </p>
 
-          <svg viewBox={`0 0 ${BAR_MAX_W * 2 + 120} 160`} className="w-full max-w-lg mx-auto">
-            {/* Country 1 bars */}
-            {[
-              { label: t('input.net'), v1: result.netAnnual, v2: compareResult.netAnnual, color1: '#059669', color2: '#10B981', y: 20 },
-              { label: t('result.employee_contributions'), v1: result.totalEmployeeDeductions, v2: compareResult.totalEmployeeDeductions, color1: '#2563EB', color2: '#60A5FA', y: 65 },
-              { label: t('result.income_tax'), v1: result.totalIncomeTax, v2: compareResult.totalIncomeTax, color1: '#DC2626', color2: '#F87171', y: 110 },
-            ].map((row) => (
-              <g key={row.label}>
-                <text x="0" y={row.y + 10} fontSize="9" fill="#64748B" fontFamily="Inter, sans-serif">
-                  {row.label.length > 18 ? row.label.slice(0, 16) + '…' : row.label}
-                </text>
-                <rect x="110" y={row.y} width={barWidth(row.v1)} height="18" fill={row.color1} rx="2" />
-                <text x={110 + barWidth(row.v1) + 4} y={row.y + 12} fontSize="9" fill="#002366" fontFamily="Inter, sans-serif">
-                  €{fmt(row.v1)}
-                </text>
-                <rect x="110" y={row.y + 22} width={barWidth(row.v2)} height="18" fill={row.color2} rx="2" />
-                <text x={110 + barWidth(row.v2) + 4} y={row.y + 34} fontSize="9" fill="#002366" fontFamily="Inter, sans-serif">
-                  €{fmt(row.v2)}
-                </text>
-              </g>
+          <div className="space-y-4">
+            {rowsA.map((row, i) => (
+              <MetricRow
+                key={row.label}
+                label={row.label}
+                a={row.value}
+                b={rowsB[i].value}
+                max={max}
+                nameA={country}
+                nameB={compareCountry}
+              />
             ))}
-          </svg>
+          </div>
 
-          <div className="flex gap-4 justify-center mt-2 text-xs font-body text-neutral">
+          <div className="flex gap-4 justify-center mt-4 text-xs text-neutral">
             <span className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm inline-block bg-[#002366]" />
-              {t(`country.${input.country}`)}
+              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_A }} />
+              {t(`country.${country}`)}
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm inline-block bg-[#059669]" />
-              {t(`country.${compareInput?.country ?? 'DE'}`)}
+              <span className="w-3 h-3 rounded-sm inline-block" style={{ background: COLOR_B }} />
+              {t(`country.${compareCountry}`)}
             </span>
           </div>
         </div>

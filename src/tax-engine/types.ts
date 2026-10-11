@@ -1,20 +1,18 @@
-export type Country = 'FR' | 'DE' | 'ES' | 'IT' | 'BE' | 'PL'
-export type Direction = 'gross_to_net' | 'net_to_gross'
+export const COUNTRIES = ['FR', 'DE', 'ES', 'IT', 'BE', 'PL'] as const
+export type Country = (typeof COUNTRIES)[number]
+export const DIRECTIONS = ['gross_to_net', 'net_to_gross'] as const
+export type Direction = (typeof DIRECTIONS)[number]
 export type EmploymentType = 'employee' | 'executive' | 'part_time'
+export const FAMILY_STATUSES = ['single', 'married', 'married_1income', 'single_parent'] as const
+export type FamilyStatus = (typeof FAMILY_STATUSES)[number]
 
 export interface CalculatorInput {
   country: Country
   grossAnnual: number
   direction: Direction
   employmentType: EmploymentType
-  hoursPerWeek?: number
-  hasCompanyBonus?: boolean
-  mealVouchers?: number
-  transportAllowance?: number
-  hasPrivatePension?: boolean
-  familyStatus: 'single' | 'married' | 'married_1income' | 'single_parent'
+  familyStatus: FamilyStatus
   numChildren: number
-  regionCode?: string
 }
 
 export interface ContributionLine {

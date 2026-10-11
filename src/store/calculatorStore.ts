@@ -1,20 +1,22 @@
 import { create } from 'zustand'
-import type { CalculatorInput, TaxResult, Country } from '../tax-engine/types'
+import type { CalculatorInput, Country, TaxResult } from '../tax-engine/types'
 import { calculateFromInput } from '../tax-engine/engine'
+import { parseShareParams, type Period } from '../lib/shareUrl'
 
 interface CalculatorState {
   input: CalculatorInput
   result: TaxResult | null
-  compareInput: CalculatorInput | null
+  // The comparison always mirrors `input` (salary, family, direction…) and only
+  // swaps the country, so it can never go stale.
+  compareCountry: Country
   compareResult: TaxResult | null
-  compareMode: boolean
+  period: Period
   setInput: (patch: Partial<CalculatorInput>) => void
-  setCompareInput: (patch: Partial<CalculatorInput>) => void
-  toggleCompareMode: () => void
   setCompareCountry: (country: Country) => void
+  setPeriod: (period: Period) => void
 }
 
-const DEFAULT_INPUT: CalculatorInput = {
+export const DEFAULT_INPUT: CalculatorInput = {
   country: 'FR',
   grossAnnual: 55_000,
   direction: 'gross_to_net',
@@ -32,42 +34,37 @@ function safeCalculate(input: CalculatorInput): TaxResult | null {
   }
 }
 
+// Never compare a country with itself.
+export function pickCompareCountry(main: Country, preferred: Country): Country {
+  if (preferred !== main) return preferred
+  return main === 'DE' ? 'FR' : 'DE'
+}
+
+function derive(input: CalculatorInput, preferredCompare: Country) {
+  const compareCountry = pickCompareCountry(input.country, preferredCompare)
+  return {
+    input,
+    result: safeCalculate(input),
+    compareCountry,
+    compareResult: safeCalculate({ ...input, country: compareCountry }),
+  }
+}
+
+// A share link is applied here, before the first render, so the page never
+// flashes the default values.
+const shared = typeof window !== 'undefined' ? parseShareParams(window.location.search) : null
+
 export const useCalculatorStore = create<CalculatorState>((set, get) => ({
-  input: DEFAULT_INPUT,
-  result: safeCalculate(DEFAULT_INPUT),
-  compareInput: null,
-  compareResult: null,
-  compareMode: false,
+  ...derive({ ...DEFAULT_INPUT, ...shared?.input }, 'DE'),
+  period: shared?.period ?? 'annual',
 
   setInput: (patch) => {
-    const newInput = { ...get().input, ...patch }
-    set({ input: newInput, result: safeCalculate(newInput) })
-  },
-
-  setCompareInput: (patch) => {
-    const base = get().compareInput ?? { ...get().input, country: 'DE' as Country }
-    const newInput = { ...base, ...patch }
-    set({ compareInput: newInput, compareResult: safeCalculate(newInput) })
-  },
-
-  toggleCompareMode: () => {
-    const { compareMode, input } = get()
-    if (!compareMode) {
-      const compareInput = { ...input, country: 'DE' as Country }
-      set({
-        compareMode: true,
-        compareInput,
-        compareResult: safeCalculate(compareInput),
-      })
-    } else {
-      set({ compareMode: false, compareInput: null, compareResult: null })
-    }
+    set(derive({ ...get().input, ...patch }, get().compareCountry))
   },
 
   setCompareCountry: (country) => {
-    const { input, compareInput } = get()
-    const base = compareInput ?? { ...input }
-    const newInput = { ...base, country }
-    set({ compareInput: newInput, compareResult: safeCalculate(newInput) })
+    set(derive(get().input, country))
   },
+
+  setPeriod: (period) => set({ period }),
 }))

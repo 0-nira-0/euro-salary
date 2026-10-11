@@ -1,41 +1,51 @@
 import { useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useCalculatorStore } from '../store/calculatorStore'
+import { buildShareUrl } from '../lib/shareUrl'
 
-export function useShareUrl() {
-  const { input } = useCalculatorStore()
-
-  const getShareUrl = useCallback(() => {
-    const params = new URLSearchParams({
-      c: input.country,
-      g: String(input.grossAnnual),
-      d: input.direction,
-      f: input.familyStatus,
-      k: String(input.numChildren),
-      et: input.employmentType,
-    })
-    if (input.regionCode) params.set('r', input.regionCode)
-    return `${window.location.origin}${window.location.pathname}?${params.toString()}`
-  }, [input])
-
-  const copyToClipboard = useCallback(async () => {
-    const url = getShareUrl()
-    await navigator.clipboard.writeText(url)
-    return url
-  }, [getShareUrl])
-
-  return { getShareUrl, copyToClipboard }
+// Clipboard API needs a secure context; fall back to execCommand elsewhere.
+async function writeToClipboard(text: string): Promise<boolean> {
+  try {
+    await navigator.clipboard.writeText(text)
+    return true
+  } catch {
+    const area = document.createElement('textarea')
+    area.value = text
+    area.setAttribute('readonly', '')
+    area.style.position = 'fixed'
+    area.style.opacity = '0'
+    document.body.appendChild(area)
+    area.select()
+    try {
+      return document.execCommand('copy')
+    } catch {
+      return false
+    } finally {
+      document.body.removeChild(area)
+    }
+  }
 }
 
-export function parseShareUrl(): Partial<import('../tax-engine/types').CalculatorInput> | null {
-  const params = new URLSearchParams(window.location.search)
-  if (!params.has('c')) return null
-  return {
-    country: params.get('c') as import('../tax-engine/types').Country,
-    grossAnnual: Number(params.get('g') ?? 60000),
-    direction: (params.get('d') ?? 'gross_to_net') as import('../tax-engine/types').Direction,
-    familyStatus: (params.get('f') ?? 'single') as import('../tax-engine/types').CalculatorInput['familyStatus'],
-    numChildren: Number(params.get('k') ?? 0),
-    employmentType: (params.get('et') ?? 'employee') as import('../tax-engine/types').EmploymentType,
-    regionCode: params.get('r') ?? undefined,
-  }
+export function useShareUrl() {
+  const { i18n } = useTranslation()
+  const input = useCalculatorStore((s) => s.input)
+  const period = useCalculatorStore((s) => s.period)
+
+  const getShareUrl = useCallback(
+    () =>
+      buildShareUrl(
+        input,
+        period,
+        i18n.language,
+        `${window.location.origin}${window.location.pathname}`
+      ),
+    [input, period, i18n.language]
+  )
+
+  const copyToClipboard = useCallback(
+    () => writeToClipboard(getShareUrl()),
+    [getShareUrl]
+  )
+
+  return { getShareUrl, copyToClipboard }
 }

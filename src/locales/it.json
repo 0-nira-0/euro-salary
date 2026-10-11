@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Calcolatore di stipendi europeo",
+    "tagline": "Lordo ↔ Netto per 6 paesi europei",
+    "description": "Calcolatore di stipendi europeo — dal lordo al netto per Francia, Germania, Spagna, Italia, Belgio e Polonia"
+  },
+  "nav": {
+    "calculator": "Calcolatore",
+    "compare": "Confronta",
+    "about": "Informazioni",
+    "language": "Lingua"
+  },
+  "country": {
+    "FR": "Francia",
+    "DE": "Germania",
+    "ES": "Spagna",
+    "IT": "Italia",
+    "BE": "Belgio",
+    "PL": "Polonia",
+    "data_year": "Dati {{year}}"
+  },
+  "input": {
+    "gross": "Lordo",
+    "net": "Netto",
+    "annual": "Annuale",
+    "monthly": "Mensile",
+    "salary_label": "Stipendio",
+    "direction_label": "Direzione del calcolo",
+    "period_label": "Periodo",
+    "empty_hint": "Inserisci un importo maggiore di 0"
+  },
+  "options": {
+    "title": "Opzioni",
+    "family_status": "Stato civile",
+    "children": "Figli",
+    "single": "Celibe/Nubile",
+    "married": "Sposato/a",
+    "married_1income": "Sposato/a (1 reddito)",
+    "single_parent": "Genitore single",
+    "not_modelled": "Non influisce sul risultato per questo paese"
+  },
+  "result": {
+    "net_monthly": "Netto / mese",
+    "net_annual": "Netto / anno",
+    "employer_cost": "Costo datore",
+    "effective_rate": "Aliquota effettiva",
+    "breakdown": "Dettaglio",
+    "employee_contributions": "Contributi dipendente",
+    "employer_contributions": "Contributi datore",
+    "income_tax": "IRPEF",
+    "title": "Risultato",
+    "gross_annual": "Lordo / anno",
+    "gross_monthly": "Lordo / mese",
+    "per_month": "/mese",
+    "empty": "Inserisci uno stipendio per vedere i risultati",
+    "slice_title": "{{label}}: {{value}} ({{percent}})"
+  },
+  "share": {
+    "button": "Condividi",
+    "copied": "Link copiato!",
+    "error": "Copia non riuscita"
+  },
+  "contribution": {
+    "social_security": "Contributi INPS",
+    "social_security_extra": "INPS aggiuntivi",
+    "income_tax": "IRPEF",
+    "regional_tax": "Addizionale regionale",
+    "municipal_tax": "Addizionale comunale",
+    "er_social_security": "INPS datore",
+    "er_accident": "INAIL",
+    "pension_t1": "Pensione (T1)",
+    "pension_t2": "Pensione (T2)",
+    "complementary_t1": "Complementare (T1)",
+    "complementary_t2": "Complementare (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG deducibile",
+    "csg_non_deductible": "CSG non deducibile",
+    "crds": "CRDS",
+    "er_health": "Salute (datore)",
+    "er_pension_t1": "Pensione T1 (datore)",
+    "er_pension_t2": "Pensione T2 (datore)",
+    "er_complementary_t1": "Complementare T1 (datore)",
+    "er_complementary_t2": "Complementare T2 (datore)",
+    "er_unemployment": "Disoccupazione (datore)",
+    "er_family": "Assegni familiari",
+    "er_ceg_t1": "CEG T1 (datore)",
+    "er_ceg_t2": "CEG T2 (datore)",
+    "pension": "Pensione",
+    "health": "Salute",
+    "care": "Assistenza",
+    "unemployment": "Disoccupazione",
+    "solidarity": "Supplemento solidarietà",
+    "er_pension": "Pensione (datore)",
+    "er_health_kv": "KV (datore)",
+    "er_care": "PV (datore)",
+    "training": "Formazione professionale",
+    "er_training": "Formazione (datore)",
+    "er_fogasa": "FOGASA",
+    "special_ss": "Contributo speciale SS",
+    "disability": "Invalidità",
+    "sickness": "Malattia",
+    "er_disability": "Invalidità (datore)",
+    "er_labor_fund": "Fondo lavoro"
+  },
+  "legal": {
+    "disclaimer_FR": "Simulazione indicativa basata sulla scala fiscale francese. Non costituisce consulenza fiscale.",
+    "disclaimer_DE": "Stima basata sulla tabella tedesca dell’imposta sui salari. Non costituisce consulenza fiscale.",
+    "disclaimer_ES": "Simulazione indicativa basata sulla scala IRPF statale spagnola. Non costituisce consulenza fiscale.",
+    "disclaimer_IT": "Simulazione indicativa basata sulla scala IRPEF. Non costituisce consulenza fiscale.",
+    "disclaimer_BE": "Simulazione indicativa basata sulla scala IPP belga. Non costituisce consulenza fiscale.",
+    "disclaimer_PL": "Stima indicativa basata sulla normativa fiscale polacca. Non costituisce consulenza fiscale."
+  },
+  "a11y": {
+    "select_country": "Seleziona il paese",
+    "language": "Lingua",
+    "pages": "Pagine",
+    "result_tabs": "Viste dei risultati",
+    "info": "Maggiori informazioni",
+    "to_results": "Mostra i risultati"
+  },
+  "table": {
+    "label": "Voce",
+    "base": "Base",
+    "rate": "Aliquota",
+    "amount": "Importo"
+  },
+  "compare": {
+    "annual": "Confronto annuale",
+    "diff_more": "{{country}}: {{amount}} in più di netto al mese",
+    "diff_equal": "Stesso stipendio netto nei due paesi"
+  },
+  "footer": {
+    "github": "Codice sorgente su GitHub"
+  },
+  "about": {
+    "title": "Informazioni su EuroSalary",
+    "intro": "EuroSalary calcola gli stipendi dal lordo al netto (e dal netto al lordo) per 6 paesi europei secondo le regole fiscali ufficiali. Tutte le formule vengono eseguite nel tuo browser: lo stipendio non esce mai da lì.",
+    "countries_title": "Paesi coperti",
+    "how_title": "Come funziona",
+    "how_1": "Lordo → Netto: valutazione diretta delle formule di ciascun paese",
+    "how_2": "Netto → Lordo: ricerca binaria (fino a 50 iterazioni, tolleranza di 0,01 €)",
+    "how_3": "Condivisione: tutti i parametri sono codificati nel link",
+    "how_4": "Confronto: due paesi affiancati con gli stessi dati",
+    "note": "Dati fiscali: {{year}}. Solo a scopo informativo: non costituisce consulenza fiscale.",
+    "notes": {
+      "FR": "Contributi URSSAF, scaglioni dell’imposta sul reddito, quoziente familiare",
+      "DE": "Tabella base dell’imposta sui salari, assicurazioni sociali, supplemento di solidarietà",
+      "ES": "IRPF statale, contributi previdenziali, riduzione per redditi da lavoro",
+      "IT": "IRPEF, contributi INPS, addizionali regionali e comunali",
+      "BE": "Imposta federale sul reddito, ONSS 13,07 %, addizionali comunali",
+      "PL": "PIT 12 / 32 %, contributi ZUS, contributo sanitario del 9 %"
+    }
+  }
+}

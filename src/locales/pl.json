@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Europejski kalkulator wynagrodzeń",
+    "tagline": "Brutto ↔ Netto dla 6 krajów europejskich",
+    "description": "Europejski kalkulator wynagrodzeń — z brutto na netto dla Francji, Niemiec, Hiszpanii, Włoch, Belgii i Polski"
+  },
+  "nav": {
+    "calculator": "Kalkulator",
+    "compare": "Porównaj",
+    "about": "O aplikacji",
+    "language": "Język"
+  },
+  "country": {
+    "FR": "Francja",
+    "DE": "Niemcy",
+    "ES": "Hiszpania",
+    "IT": "Włochy",
+    "BE": "Belgia",
+    "PL": "Polska",
+    "data_year": "Dane {{year}}"
+  },
+  "input": {
+    "gross": "Brutto",
+    "net": "Netto",
+    "annual": "Rocznie",
+    "monthly": "Miesięcznie",
+    "salary_label": "Wynagrodzenie",
+    "direction_label": "Kierunek obliczeń",
+    "period_label": "Okres",
+    "empty_hint": "Wpisz kwotę większą niż 0"
+  },
+  "options": {
+    "title": "Opcje",
+    "family_status": "Stan cywilny",
+    "children": "Dzieci",
+    "single": "Kawaler/Panna",
+    "married": "Zamężna/Żonaty",
+    "married_1income": "Małżeństwo (1 dochód)",
+    "single_parent": "Samotny rodzic",
+    "not_modelled": "Nie wpływa na wynik dla tego kraju"
+  },
+  "result": {
+    "net_monthly": "Netto / miesiąc",
+    "net_annual": "Netto / rok",
+    "employer_cost": "Koszt pracodawcy",
+    "effective_rate": "Efektywna stawka",
+    "breakdown": "Szczegóły",
+    "employee_contributions": "Składki pracownika",
+    "employer_contributions": "Składki pracodawcy",
+    "income_tax": "Podatek dochodowy",
+    "title": "Wynik",
+    "gross_annual": "Brutto / rok",
+    "gross_monthly": "Brutto / miesiąc",
+    "per_month": "/mies.",
+    "empty": "Wpisz wynagrodzenie, aby zobaczyć wyniki",
+    "slice_title": "{{label}}: {{value}} ({{percent}})"
+  },
+  "share": {
+    "button": "Udostępnij",
+    "copied": "Link skopiowany!",
+    "error": "Nie udało się skopiować"
+  },
+  "contribution": {
+    "pension": "Składka emerytalna",
+    "disability": "Składka rentowa",
+    "sickness": "Składka chorobowa",
+    "health": "Składka zdrowotna",
+    "income_tax": "Podatek PIT",
+    "er_pension": "Emerytalna (pracodawca)",
+    "er_disability": "Rentowa (pracodawca)",
+    "er_accident": "Wypadkowa",
+    "er_labor_fund": "Fundusz Pracy",
+    "pension_t1": "Emerytura (T1)",
+    "pension_t2": "Emerytura (T2)",
+    "complementary_t1": "Uzupełniająca (T1)",
+    "complementary_t2": "Uzupełniająca (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG odliczalna",
+    "csg_non_deductible": "CSG nieodliczalna",
+    "crds": "CRDS",
+    "er_health": "Zdrowie (pracodawca)",
+    "er_pension_t1": "Emerytura T1 (pracodawca)",
+    "er_pension_t2": "Emerytura T2 (pracodawca)",
+    "er_complementary_t1": "Uzupełniająca T1 (pracodawca)",
+    "er_complementary_t2": "Uzupełniająca T2 (pracodawca)",
+    "er_unemployment": "Bezrobocie (pracodawca)",
+    "er_family": "Zasiłki rodzinne",
+    "er_ceg_t1": "CEG T1 (pracodawca)",
+    "er_ceg_t2": "CEG T2 (pracodawca)",
+    "care": "Ubezpieczenie opiekuńcze",
+    "unemployment": "Bezrobocie",
+    "solidarity": "Dopłata solidarnościowa",
+    "er_health_kv": "KV (pracodawca)",
+    "er_care": "PV (pracodawca)",
+    "social_security": "Ubezpieczenie społeczne",
+    "social_security_extra": "US (dodatkowe)",
+    "training": "Szkolenia zawodowe",
+    "er_social_security": "Ubezpieczenie społeczne (pracodawca)",
+    "er_training": "Szkolenia (pracodawca)",
+    "er_fogasa": "FOGASA",
+    "regional_tax": "Podatek regionalny",
+    "municipal_tax": "Podatek gminny",
+    "special_ss": "Specjalna składka SS"
+  },
+  "legal": {
+    "disclaimer_FR": "Szacunek orientacyjny na podstawie francuskiej skali podatkowej. Nie stanowi porady podatkowej.",
+    "disclaimer_DE": "Szacunek na podstawie niemieckiej tabeli podatku od wynagrodzeń. Nie stanowi porady podatkowej.",
+    "disclaimer_ES": "Szacunek orientacyjny na podstawie hiszpańskiej skali IRPF. Nie stanowi porady podatkowej.",
+    "disclaimer_IT": "Szacunek orientacyjny na podstawie włoskiej skali IRPEF. Nie stanowi porady podatkowej.",
+    "disclaimer_BE": "Szacunek orientacyjny na podstawie belgijskiej skali IPP. Nie stanowi porady podatkowej.",
+    "disclaimer_PL": "Szacunek orientacyjny na podstawie polskich przepisów podatkowych. Nie stanowi porady podatkowej."
+  },
+  "a11y": {
+    "select_country": "Wybierz kraj",
+    "language": "Język",
+    "pages": "Strony",
+    "result_tabs": "Widoki wyników",
+    "info": "Więcej informacji",
+    "to_results": "Pokaż wyniki"
+  },
+  "table": {
+    "label": "Pozycja",
+    "base": "Podstawa",
+    "rate": "Stawka",
+    "amount": "Kwota"
+  },
+  "compare": {
+    "annual": "Porównanie roczne",
+    "diff_more": "{{country}}: o {{amount}} więcej netto miesięcznie",
+    "diff_equal": "Takie samo wynagrodzenie netto w obu krajach"
+  },
+  "footer": {
+    "github": "Kod źródłowy na GitHubie"
+  },
+  "about": {
+    "title": "O aplikacji EuroSalary",
+    "intro": "EuroSalary oblicza wynagrodzenia z brutto na netto (i z netto na brutto) dla 6 krajów europejskich według oficjalnych przepisów podatkowych. Wszystkie obliczenia działają w Twojej przeglądarce — wynagrodzenie nigdy jej nie opuszcza.",
+    "countries_title": "Obsługiwane kraje",
+    "how_title": "Jak to działa",
+    "how_1": "Brutto → Netto: bezpośrednie obliczenie według wzorów dla każdego kraju",
+    "how_2": "Netto → Brutto: wyszukiwanie binarne (do 50 iteracji, tolerancja 0,01 €)",
+    "how_3": "Udostępnianie: wszystkie parametry są zapisane w linku",
+    "how_4": "Porównanie: dwa kraje obok siebie przy tych samych danych",
+    "note": "Dane podatkowe: {{year}}. Wyłącznie w celach informacyjnych — nie stanowi porady podatkowej.",
+    "notes": {
+      "FR": "Składki URSSAF, skala podatku dochodowego, iloraz rodzinny",
+      "DE": "Podstawowa tabela podatku od wynagrodzeń, ubezpieczenia społeczne, dopłata solidarnościowa",
+      "ES": "Państwowy IRPF, składki na ubezpieczenie społeczne, ulga od dochodów z pracy",
+      "IT": "IRPEF, składki INPS, dodatki regionalne i gminne",
+      "BE": "Federalny podatek dochodowy, ONSS 13,07 %, dodatki gminne",
+      "PL": "PIT 12 / 32 %, składki ZUS, składka zdrowotna 9 %"
+    }
+  }
+}

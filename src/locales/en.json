@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "European Salary Calculator",
+    "tagline": "Gross ↔ Net for 6 European countries",
+    "description": "European salary calculator — gross to net for France, Germany, Spain, Italy, Belgium and Poland"
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "compare": "Compare",
+    "about": "About",
+    "language": "Language"
+  },
+  "country": {
+    "FR": "France",
+    "DE": "Germany",
+    "ES": "Spain",
+    "IT": "Italy",
+    "BE": "Belgium",
+    "PL": "Poland",
+    "data_year": "Data {{year}}"
+  },
+  "input": {
+    "gross": "Gross",
+    "net": "Net",
+    "annual": "Annual",
+    "monthly": "Monthly",
+    "salary_label": "Salary",
+    "direction_label": "Calculation direction",
+    "period_label": "Period",
+    "empty_hint": "Enter an amount greater than 0"
+  },
+  "options": {
+    "title": "Options",
+    "family_status": "Family status",
+    "children": "Children",
+    "single": "Single",
+    "married": "Married",
+    "married_1income": "Married (1 income)",
+    "single_parent": "Single parent",
+    "not_modelled": "Doesn't affect the result for this country"
+  },
+  "result": {
+    "net_monthly": "Net / month",
+    "net_annual": "Net / year",
+    "employer_cost": "Employer cost",
+    "effective_rate": "Effective tax rate",
+    "breakdown": "Breakdown",
+    "employee_contributions": "Employee contributions",
+    "employer_contributions": "Employer contributions",
+    "income_tax": "Income tax",
+    "title": "Result",
+    "gross_annual": "Gross / year",
+    "gross_monthly": "Gross / month",
+    "per_month": "/mo",
+    "empty": "Enter a salary to see results",
+    "slice_title": "{{label}}: {{value}} ({{percent}})"
+  },
+  "share": {
+    "button": "Share",
+    "copied": "Link copied!",
+    "error": "Copy failed"
+  },
+  "contribution": {
+    "pension_t1": "Old-age insurance (T1)",
+    "pension_t2": "Old-age insurance (T2)",
+    "complementary_t1": "Supplementary pension (T1)",
+    "complementary_t2": "Supplementary pension (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG (deductible)",
+    "csg_non_deductible": "CSG (non-deductible)",
+    "crds": "CRDS",
+    "income_tax": "Income tax",
+    "er_health": "Health (employer)",
+    "er_pension_t1": "Pension T1 (employer)",
+    "er_pension_t2": "Pension T2 (employer)",
+    "er_complementary_t1": "Supplementary T1 (employer)",
+    "er_complementary_t2": "Supplementary T2 (employer)",
+    "er_unemployment": "Unemployment (employer)",
+    "er_family": "Family allowances (employer)",
+    "er_accident": "Workplace accidents",
+    "er_ceg_t1": "CEG T1 (employer)",
+    "er_ceg_t2": "CEG T2 (employer)",
+    "pension": "Pension insurance",
+    "health": "Health insurance",
+    "care": "Care insurance",
+    "unemployment": "Unemployment insurance",
+    "solidarity": "Solidarity surcharge",
+    "er_pension": "Pension (employer)",
+    "er_health_kv": "Health KV (employer)",
+    "er_care": "Care PV (employer)",
+    "social_security": "Social security",
+    "training": "Vocational training",
+    "er_social_security": "Social security (employer)",
+    "er_training": "Training (employer)",
+    "er_fogasa": "FOGASA",
+    "social_security_extra": "Social security (additional)",
+    "regional_tax": "Regional tax",
+    "municipal_tax": "Municipal tax",
+    "special_ss": "Special SS contribution",
+    "disability": "Disability insurance",
+    "sickness": "Sickness insurance",
+    "er_disability": "Disability (employer)",
+    "er_labor_fund": "Labor Fund"
+  },
+  "legal": {
+    "disclaimer_FR": "Indicative simulation based on the French tax scale. Does not constitute tax advice.",
+    "disclaimer_DE": "Estimate based on the German wage tax table. Not tax advice.",
+    "disclaimer_ES": "Indicative simulation based on the Spanish state IRPF scale. Does not constitute tax advice.",
+    "disclaimer_IT": "Indicative simulation based on the Italian IRPEF scale. Does not constitute tax advice.",
+    "disclaimer_BE": "Indicative simulation based on the Belgian IPP scale. Does not constitute tax advice.",
+    "disclaimer_PL": "Indicative estimate based on Polish tax regulations. Does not constitute tax advice."
+  },
+  "a11y": {
+    "select_country": "Select country",
+    "language": "Language",
+    "pages": "Pages",
+    "result_tabs": "Result views",
+    "info": "More information",
+    "to_results": "Show results"
+  },
+  "table": {
+    "label": "Item",
+    "base": "Base",
+    "rate": "Rate",
+    "amount": "Amount"
+  },
+  "compare": {
+    "annual": "Annual comparison",
+    "diff_more": "{{country}}: {{amount}} more net per month",
+    "diff_equal": "Same net salary in both countries"
+  },
+  "footer": {
+    "github": "Source on GitHub"
+  },
+  "about": {
+    "title": "About EuroSalary",
+    "intro": "EuroSalary calculates gross-to-net (and net-to-gross) salaries for 6 European countries using official tax rules. All formulas run in your browser — your salary never leaves it.",
+    "countries_title": "Covered countries",
+    "how_title": "How it works",
+    "how_1": "Gross → Net: direct formula evaluation per country module",
+    "how_2": "Net → Gross: binary search (up to 50 iterations, €0.01 tolerance)",
+    "how_3": "Share: all parameters are encoded in the link",
+    "how_4": "Compare: any two countries side by side with the same input",
+    "note": "Tax data: {{year}}. For informational purposes only — not tax advice.",
+    "notes": {
+      "FR": "URSSAF contributions, income tax scale, family quotient",
+      "DE": "Wage tax base table, social insurance, solidarity surcharge",
+      "ES": "State IRPF, social security contributions, work income reduction",
+      "IT": "IRPEF, INPS contributions, regional and municipal surcharges",
+      "BE": "Federal income tax, ONSS 13.07 %, municipal surcharges",
+      "PL": "PIT 12 / 32 %, ZUS contributions, 9 % health contribution"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "EuroSalary",
+    "subtitle": "Europäischer Gehaltsrechner",
+    "tagline": "Brutto ↔ Netto für 6 europäische Länder",
+    "description": "Europäischer Gehaltsrechner — Brutto zu Netto für Frankreich, Deutschland, Spanien, Italien, Belgien und Polen"
+  },
+  "nav": {
+    "calculator": "Rechner",
+    "compare": "Vergleich",
+    "about": "Info",
+    "language": "Sprache"
+  },
+  "country": {
+    "FR": "Frankreich",
+    "DE": "Deutschland",
+    "ES": "Spanien",
+    "IT": "Italien",
+    "BE": "Belgien",
+    "PL": "Polen",
+    "data_year": "Daten {{year}}"
+  },
+  "input": {
+    "gross": "Brutto",
+    "net": "Netto",
+    "annual": "Jährlich",
+    "monthly": "Monatlich",
+    "salary_label": "Gehalt",
+    "direction_label": "Berechnungsrichtung",
+    "period_label": "Zeitraum",
+    "empty_hint": "Bitte einen Betrag größer als 0 eingeben"
+  },
+  "options": {
+    "title": "Optionen",
+    "family_status": "Familienstand",
+    "children": "Kinder",
+    "single": "Ledig",
+    "married": "Verheiratet",
+    "married_1income": "Verheiratet (1 Einkommen)",
+    "single_parent": "Alleinerziehend",
+    "not_modelled": "Hat in diesem Land keinen Einfluss auf das Ergebnis"
+  },
+  "result": {
+    "net_monthly": "Netto / Monat",
+    "net_annual": "Netto / Jahr",
+    "employer_cost": "Arbeitgeberkosten",
+    "effective_rate": "Effektivsteuersatz",
+    "breakdown": "Aufschlüsselung",
+    "employee_contributions": "Arbeitnehmerbeiträge",
+    "employer_contributions": "Arbeitgeberbeiträge",
+    "income_tax": "Einkommensteuer",
+    "title": "Ergebnis",
+    "gross_annual": "Brutto / Jahr",
+    "gross_monthly": "Brutto / Monat",
+    "per_month": "/Mon.",
+    "empty": "Gehalt eingeben, um das Ergebnis zu sehen",
+    "slice_title": "{{label}}: {{value}} ({{percent}})"
+  },
+  "share": {
+    "button": "Teilen",
+    "copied": "Link kopiert!",
+    "error": "Kopieren fehlgeschlagen"
+  },
+  "contribution": {
+    "pension_t1": "Rentenversicherung (T1)",
+    "pension_t2": "Rentenversicherung (T2)",
+    "complementary_t1": "Zusatzrente (T1)",
+    "complementary_t2": "Zusatzrente (T2)",
+    "ceg_t1": "CEG (T1)",
+    "ceg_t2": "CEG (T2)",
+    "csg_deductible": "CSG (abzugsfähig)",
+    "csg_non_deductible": "CSG (nicht abzugsfähig)",
+    "crds": "CRDS",
+    "income_tax": "Einkommensteuer",
+    "er_health": "Krankenversicherung (AG)",
+    "er_pension_t1": "Rentenversicherung T1 (AG)",
+    "er_pension_t2": "Rentenversicherung T2 (AG)",
+    "er_complementary_t1": "Zusatzrente T1 (AG)",
+    "er_complementary_t2": "Zusatzrente T2 (AG)",
+    "er_unemployment": "Arbeitslosenversicherung (AG)",
+    "er_family": "Familienleistungen (AG)",
+    "er_accident": "Berufsunfälle",
+    "er_ceg_t1": "CEG T1 (AG)",
+    "er_ceg_t2": "CEG T2 (AG)",
+    "pension": "Rentenversicherung",
+    "health": "Krankenversicherung",
+    "care": "Pflegeversicherung",
+    "unemployment": "Arbeitslosenversicherung",
+    "solidarity": "Solidaritätszuschlag",
+    "er_pension": "Rente (AG)",
+    "er_health_kv": "KV (AG)",
+    "er_care": "PV (AG)",
+    "social_security": "Sozialversicherung",
+    "training": "Berufsausbildung",
+    "er_social_security": "Sozialversicherung (AG)",
+    "er_training": "Ausbildung (AG)",
+    "er_fogasa": "FOGASA",
+    "social_security_extra": "SV (Zusatzbeitrag)",
+    "regional_tax": "Regionalsteuer",
+    "municipal_tax": "Gemeindesteuer",
+    "special_ss": "Sonderbeitrag SV",
+    "disability": "Berufsunfähigkeitsversicherung",
+    "sickness": "Krankengeld",
+    "er_disability": "Berufsunfähigkeit (AG)",
+    "er_labor_fund": "Arbeitsfonds"
+  },
+  "legal": {
+    "disclaimer_FR": "Schätzung auf Basis des französischen Steuertarifs. Keine Steuerberatung.",
+    "disclaimer_DE": "Schätzung auf Basis des deutschen Lohnsteuertarifs. Keine Steuerberatung.",
+    "disclaimer_ES": "Schätzung auf Basis des spanischen IRPF-Tarifs. Keine Steuerberatung.",
+    "disclaimer_IT": "Schätzung auf Basis des italienischen IRPEF-Tarifs. Keine Steuerberatung.",
+    "disclaimer_BE": "Schätzung auf Basis des belgischen IPP-Tarifs. Keine Steuerberatung.",
+    "disclaimer_PL": "Schätzung auf Basis der polnischen Steuervorschriften. Keine Steuerberatung."
+  },
+  "a11y": {
+    "select_country": "Land auswählen",
+    "language": "Sprache",
+    "pages": "Seiten",
+    "result_tabs": "Ergebnisansichten",
+    "info": "Weitere Informationen",
+    "to_results": "Ergebnisse anzeigen"
+  },
+  "table": {
+    "label": "Position",
+    "base": "Basis",
+    "rate": "Satz",
+    "amount": "Betrag"
+  },
+  "compare": {
+    "annual": "Jahresvergleich",
+    "diff_more": "{{country}}: {{amount}} mehr netto pro Monat",
+    "diff_equal": "Gleiches Nettogehalt in beiden Ländern"
+  },
+  "footer": {
+    "github": "Quellcode auf GitHub"
+  },
+  "about": {
+    "title": "Über EuroSalary",
+    "intro": "EuroSalary berechnet Brutto-Netto- (und Netto-Brutto-) Gehälter für 6 europäische Länder nach den offiziellen Steuerregeln. Alle Formeln laufen in Ihrem Browser — Ihr Gehalt verlässt ihn nie.",
+    "countries_title": "Abgedeckte Länder",
+    "how_title": "So funktioniert es",
+    "how_1": "Brutto → Netto: direkte Formelauswertung je Länder-Modul",
+    "how_2": "Netto → Brutto: binäre Suche (bis zu 50 Iterationen, Toleranz 0,01 €)",
+    "how_3": "Teilen: Alle Parameter sind im Link kodiert",
+    "how_4": "Vergleich: zwei Länder nebeneinander mit denselben Eingaben",
+    "note": "Steuerdaten: {{year}}. Nur zu Informationszwecken — keine Steuerberatung.",
+    "notes": {
+      "FR": "URSSAF-Beiträge, Einkommensteuertarif, Familienquotient",
+      "DE": "Lohnsteuer-Grundtabelle, Sozialversicherung, Solidaritätszuschlag",
+      "ES": "Staatliche IRPF, Sozialversicherungsbeiträge, Abzug für Erwerbseinkommen",
+      "IT": "IRPEF, INPS-Beiträge, regionale und kommunale Zuschläge",
+      "BE": "Föderale Einkommensteuer, ONSS 13,07 %, kommunale Zuschläge",
+      "PL": "PIT 12 / 32 %, ZUS-Beiträge, 9 % Gesundheitsbeitrag"
+    }
+  }
+}
